@@ -1,0 +1,23 @@
+{
+  "name": "4_desktopapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxx-808/desktopApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxx-808/desktopApp/issues"
+  },
+  "homepage": "https://github.com/maxx-808/desktopApp#readme",
+  "dependencies": {
+    "create-electron-app": "^1.0.0",
+    "electron": "^13.2.1"
+  }
+}
