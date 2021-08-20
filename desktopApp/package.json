@@ -9,7 +9,23 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "desktopapp",
+    "win": {
+      "target": ["nsis"],
+      "icon": "src/logo.png"
+    },
+    "nsis": {
+      "installerIcon": "src/logo.png",
+      "uninstallerIcon": "src/logo.png",
+      "uninstallerDisplayName": "CPU Monitor",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "license.txt"
+    }
   },
   "keywords": [],
   "author": {
