@@ -24,7 +24,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, "index.html"));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.webContents.on("did-finish-load", () => {
     setInterval(() => {
@@ -46,6 +46,7 @@ app.on("ready", createWindow);
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on("window-all-closed", () => {
+  mainWindow = null;
   if (process.platform !== "darwin") {
     app.quit();
   }
