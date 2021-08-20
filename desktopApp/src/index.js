@@ -12,7 +12,7 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
@@ -26,16 +26,14 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 
-  os.cpuUsage((v) => {
-    console.log("cpu usage %" + v * 100);
-    mainWindow.webContents.on("did-finish-load", () => {
-      mainWindow.webContents.send("cpu", v * 100);
-      mainWindow.webContents.send("mem", os.freememPercentage() * 100);
-      mainWindow.webContents.send("total-mem", os.totalmem() / 1024);
-    });
-    console.log("mem usage %" + os.freememPercentage() * 100);
-
-    console.log("total mem GB" + os.totalmem() / 1024);
+  mainWindow.webContents.on("did-finish-load", () => {
+    setInterval(() => {
+      os.cpuUsage((v) => {
+        mainWindow.webContents.send("cpu", v * 100);
+        mainWindow.webContents.send("mem", os.freememPercentage() * 100);
+        mainWindow.webContents.send("total-mem", os.totalmem() / 1024);
+      });
+    }, 1000);
   });
 };
 
