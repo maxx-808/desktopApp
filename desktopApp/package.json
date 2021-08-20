@@ -1,6 +1,6 @@
 {
   "name": "desktopapp",
-  "productName": "desktopapp",
+  "productName": "CPU Monitor",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
