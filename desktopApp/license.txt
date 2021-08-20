@@ -1,0 +1,1 @@
+This is a free license app designed as a personal project. Purely made to practice with electron npm, this app has no data logging, information stealing or any other secret motive. This app will in no way harm you or your computer and will not be responsible for anything of the sort, what you see is what you get, that's it.
