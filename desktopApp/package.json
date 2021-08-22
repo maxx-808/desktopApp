@@ -16,13 +16,15 @@
     "appId": "desktopapp",
     "win": {
       "target": ["nsis"],
-      "icon": "src/icon.ico"
+      "icon": "src/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
     },
     "nsis": {
       "installerIcon": "src/icon.ico",
       "uninstallerIcon": "src/icon.ico",
       "uninstallDisplayName": "CPU Monitor",
       "oneClick": false,
+      "perMachine": true,
       "allowToChangeInstallationDirectory": true,
       "license": "license.txt"
     }
