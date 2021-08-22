@@ -16,12 +16,12 @@
     "appId": "desktopapp",
     "win": {
       "target": ["nsis"],
-      "icon": "src/logo.png"
+      "icon": "src/icon.ico"
     },
     "nsis": {
-      "installerIcon": "src/logo.png",
-      "uninstallerIcon": "src/logo.png",
-      "uninstallerDisplayName": "CPU Monitor",
+      "installerIcon": "src/icon.ico",
+      "uninstallerIcon": "src/icon.ico",
+      "uninstallDisplayName": "CPU Monitor",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "license": "license.txt"
@@ -29,7 +29,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Maxx",
+    "name": "Max",
     "email": "maxhiga.hawaii@gmail.com"
   },
   "license": "MIT",
@@ -61,7 +61,7 @@
     }
   },
   "dependencies": {
-    "electron-builder": "^22.11.7",
+
     "electron-squirrel-startup": "^1.0.0",
     "os-utils": "0.0.14"
   },
@@ -71,6 +71,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "electron": "^13.2.1"
+    "electron": "^13.2.1",
+    "electron-builder": "^22.11.7"
   }
 }
